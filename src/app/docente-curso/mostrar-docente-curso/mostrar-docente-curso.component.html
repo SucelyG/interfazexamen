@@ -1,0 +1,71 @@
+<div class="mat-elevation-z8">
+  <mat-toolbar style="background-color:rgb(241, 218, 87);" >
+    <span>Docente Curso</span>
+    <div class="example-spacer"></div>
+    <button mat-raised-button color="primary" routerLink="/agregar-docente-curso">Agregar</button>
+  </mat-toolbar>
+  <table mat-table class="full-width-table" matSort aria-label="Elements">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="id_docente">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id Docente</th>
+      <td mat-cell *matCellDef="let row">{{row.id_docente}}</td>
+    </ng-container>
+    <ng-container matColumnDef="docente">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre Docente</th>
+      <td mat-cell *matCellDef="let row">{{row.docente}}</td>
+    </ng-container>
+    <ng-container matColumnDef="id_curso">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id Curso</th>
+      <td mat-cell *matCellDef="let row">{{row.id_curso}}</td>
+    </ng-container>
+    <ng-container matColumnDef="curso">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre Curso</th>
+      <td mat-cell *matCellDef="let row">{{row.curso}}</td>
+    </ng-container>
+    <ng-container matColumnDef="stauts">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+      <td mat-cell *matCellDef="let row">{{row.stauts}}</td>
+    </ng-container>
+    <ng-container matColumnDef="fecha_inicio">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha Inicio</th>
+      <td mat-cell *matCellDef="let row">{{row.fecha_inicio}}</td>
+    </ng-container>
+    <ng-container matColumnDef="fecha_fin">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha Fin</th>
+      <td mat-cell *matCellDef="let row">{{row.fecha_fin}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Acciones">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+      <td mat-cell *matCellDef="let row">
+        <a>
+          <button (click)="modificarDocenteCurso(row.id)" mat-mini-fab color="primary" aria-label="Modificar">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </a>
+        <a>
+          <button (click)="eliminarDocenteCurso(row.id)" mat-mini-fab color="warn" aria-label="Eliminar">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator
+      [length]="dataSource?.data?.length"
+      [pageIndex]="0"
+      [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 20]"
+      aria-label="Select page">
+  </mat-paginator>
+</div>
