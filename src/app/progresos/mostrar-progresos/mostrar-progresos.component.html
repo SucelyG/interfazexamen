@@ -1,0 +1,64 @@
+<div class="mat-elevation-z8">
+  <mat-toolbar style="background-color:rgb(241, 218, 87);" >
+    <span>Docente Curso</span>
+    <div class="example-spacer"></div>
+    <button mat-raised-button color="primary" routerLink="/agregar-docente-curso">Agregar</button>
+  </mat-toolbar>
+  <table mat-table class="full-width-table" matSort aria-label="Elements">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="id_persona">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id Persona</th>
+      <td mat-cell *matCellDef="let row">{{row.id_persona}}</td>
+    </ng-container>
+    <ng-container matColumnDef="peso_inicial">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Peso inicial</th>
+      <td mat-cell *matCellDef="let row">{{row.peso_inicial}}</td>
+    </ng-container>
+    <ng-container matColumnDef="peso_meta">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Peso meta</th>
+      <td mat-cell *matCellDef="let row">{{row.peso_meta}}</td>
+    </ng-container>
+    <ng-container matColumnDef="tallas_inicial">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>tallas inicial</th>
+      <td mat-cell *matCellDef="let row">{{row.tallas_inicial}}</td>
+    </ng-container>
+    <ng-container matColumnDef="tallas_meta">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>tallas meta</th>
+      <td mat-cell *matCellDef="let row">{{row.tallas_meta}}</td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="Acciones">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+      <td mat-cell *matCellDef="let row">
+        <a>
+          <button (click)="modificarprogresos(row.id)" mat-mini-fab color="primary" aria-label="Modificar">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </a>
+        <a>
+          <button (click)="eliminarprogresos(row.id)" mat-mini-fab color="warn" aria-label="Eliminar">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator
+      [length]="dataSource?.data?.length"
+      [pageIndex]="0"
+      [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 20]"
+      aria-label="Select page">
+  </mat-paginator>
+</div>

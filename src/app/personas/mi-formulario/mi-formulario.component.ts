@@ -13,9 +13,8 @@ export class MiFormularioComponent {
   form = this.fb.group({
     id: [''],
     nombre: ['', Validators.required],
-    apellido: ['', Validators.required],
-    fecha_nacimiento: ['', Validators.required],
-    Direccion: ['', Validators.required]
+    Apellido: ['', Validators.required],
+   edad: ['', Validators.required]
   });
 
 
@@ -29,9 +28,8 @@ export class MiFormularioComponent {
     const persona:Persona ={
       id:this.form.value.id,
       nombre:this.form.value.nombre,
-      apellido:this.form.value.apellido,
-      fecha_nacimiento:this.form.value.fecha_nacimiento,
-      Direccion:this.form.value.Direccion,
+      Apellido:this.form.value.Apellido,
+      edad:this.form.value.edad,
     }
     /*console.log(persona);*/
 

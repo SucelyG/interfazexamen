@@ -1,0 +1,64 @@
+<form [formGroup]= "addressForm" novalidate (ngSubmit)= "onAgregar()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Agregar Dieta</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="dietas" formControlName="dietas">
+            <mat-error *ngIf= "addressForm.controls['dietas'].hasError('required')">
+              <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="listado_de_dietas" formControlName="listado_de_dietas">
+            <mat-error *ngIf= "addressForm.controls['listado_de_dietas'].hasError('required')">
+              <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+ <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="fecha_inicio" formControlName="fecha_inicio">
+            <mat-error *ngIf= "addressForm.controls['fecha_inicio'].hasError('required')">
+              <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="fecha_fin" formControlName="fecha_fin">
+            <mat-error *ngIf= "addressForm.controls['fecha_fin'].hasError('required')">
+              <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="id_persona" formControlName="id_personao">
+            <mat-error *ngIf= "addressForm.controls['id_persona'].hasError('required')">
+              <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions style="text-align: center;">
+      <button mat-raised-button color="primary" type="submit" [disabled]= "addressForm.invalid">Agregar</button>
+      <button mat-raised-button color="primary" routerLink="/dieta" >Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

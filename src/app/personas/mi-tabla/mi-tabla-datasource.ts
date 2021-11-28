@@ -8,9 +8,9 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 export interface Persona {
   "id": string,
   "nombre": string,
-  "apellido": string,
-  "fecha_nacimiento": string,
-  "Direccion": string
+  "Apellido": string,
+  "edad": string,
+
 }
 
 // TODO: replace this with real data from your application
@@ -80,9 +80,8 @@ export class MiTablaDataSource extends DataSource<Persona> {
       const isAsc = this.sort?.direction === 'asc';
       switch (this.sort?.active) {
         case 'nombre': return compare(a.nombre, b.nombre, isAsc);
-        case 'apellido': return compare(a.apellido, b.apellido, isAsc);
-        case 'fecha_nacimiento': return compare(a.fecha_nacimiento, b.fecha_nacimiento, isAsc);
-        case 'direccion': return compare(a.Direccion, b.Direccion, isAsc);
+        case 'Apellido': return compare(a.Apellido, b.Apellido, isAsc);
+        case 'edad': return compare(a.edad, b.edad, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
         default: return 0;
       }

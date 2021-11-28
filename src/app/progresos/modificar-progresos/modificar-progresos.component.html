@@ -1,0 +1,57 @@
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onActualizar()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Actualizar progresos</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput [(ngModel)]="progresos.id_persona" placeholder="Id Persona" formControlName="id_persona">
+            <mat-error *ngIf="addressForm.controls['id_persona'].hasError('required')">
+              <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput [(ngModel)]="progresos.peso_inicial" placeholder="Peso inicial" formControlName="peso_inicial">
+            <mat-error *ngIf="addressForm.controls['peso_inicial'].hasError('required')">
+              <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput [(ngModel)]="progresos.peso_meta" placeholder="Peso meta" formControlName="peso_meta">
+            <mat-error *ngIf="addressForm.controls['peso_meta'].hasError('required')">
+              <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput [(ngModel)]="progresos.tallas_inicial" placeholder="Tallas inicial" formControlName="tallas_inicial">
+            <mat-error *ngIf="addressForm.controls['tallas_inicial'].hasError('required')">
+              <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput [(ngModel)]="progresos.tallas_meta" placeholder="Tallas Meta" formControlName="tallas_meta">
+            <mat-error *ngIf="addressForm.controls['tallas_meta'].hasError('required')">
+              <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions style="text-align: center;">
+      <button mat-raised-button color="primary" type="submit" [disabled]="addressForm.invalid">Guardar</button>
+      <button mat-raised-button color="primary" routerLink="/progresos">Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

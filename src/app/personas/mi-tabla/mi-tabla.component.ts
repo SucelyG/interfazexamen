@@ -18,7 +18,7 @@ export class MiTablaComponent implements AfterViewInit, OnInit {
   dataSource!: MiTablaDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'nombre', 'apellido', 'fecha_nacimiento', 'Direccion', 'Acciones'];
+  displayedColumns = ['id', 'nombre', 'Apellido',  'edad', 'Acciones'];
   constructor(private personaService : PersonaService, private router:Router) {
     this.listarPersonas();
   }

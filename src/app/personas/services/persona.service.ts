@@ -9,8 +9,7 @@ import { Injectable } from '@angular/core';
 })
 export class PersonaService {
 
-  /*URL = 'http://localhost:3000/personas';*/
-  URL = 'https://api-rest-colegio.herokuapp.com/personas';
+  URL = 'http://localhost:3000/personas';
   constructor(private httClient : HttpClient)  { }
 
   getPersonas(): Observable<Persona[]>{

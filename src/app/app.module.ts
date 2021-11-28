@@ -25,22 +25,25 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditarFormularioComponent } from './personas/editar-formulario/editar-formulario.component';
-import { MostrarComponent } from './estudiantes/mostrar/mostrar.component';
-import { AgregarComponent } from './estudiantes/agregar/agregar.component';
-import { ModificarComponent } from './estudiantes/modificar/modificar.component';
-import { MostrarDocentesComponent } from './docentes/mostrar-docentes/mostrar-docentes.component';
-import { AgregarDocentesComponent } from './docentes/agregar-docentes/agregar-docentes.component';
-import { ModificarDocentesComponent } from './docentes/modificar-docentes/modificar-docentes.component';
+import { MostrarclienteComponent } from './clientes/mostrar-clientes/mostrar-clientes.component';
+import { AgregarclienteComponent } from './clientes/agregar-clientes/agregar-clientes.component';
+import { ModificarclienteComponent } from './clientes/modificar-clientes/modificar-clientes.component';
+import { MostrarentrenadorComponent } from './entrenador/mostrar-entrenador/mostrar-entrenador.component';
+import { AgregarentrenadorComponent } from './entrenador/agregar-entrenador/agregar-entrenador.component';
+import { ModificarentrenadorComponent } from './entrenador/modificar-entrenador/modificar-entrenador.component';
 import { LoginFormularioComponent } from './public/login-formulario/login-formulario.component';
-import { MostarCursosComponent } from './cursos/mostar-cursos/mostar-cursos.component';
-import { AgregarCursosComponent } from './cursos/agregar-cursos/agregar-cursos.component';
-import { ModificarCursosComponent } from './cursos/modificar-cursos/modificar-cursos.component';
-import { MostrarEstudianteCursoComponent } from './estudiante-curso/mostrar-estudiante-curso/mostrar-estudiante-curso.component';
-import { AgregarEstudianteCursoComponent } from './estudiante-curso/agregar-estudiante-curso/agregar-estudiante-curso.component';
-import { ModificarEstudianteCursoComponent } from './estudiante-curso/modificar-estudiante-curso/modificar-estudiante-curso.component';
-import { MostrarDocenteCursoComponent } from './docente-curso/mostrar-docente-curso/mostrar-docente-curso.component';
-import { AgregarDocenteCursoComponent } from './docente-curso/agregar-docente-curso/agregar-docente-curso.component';
-import { ModificarDocenteCursoComponent } from './docente-curso/modificar-docente-curso/modificar-docente-curso.component';
+import { MostrardietaComponent } from './dietas/mostrar-dietas/mostrar-dietas.component';
+import { AgregardietaComponent } from './dietas/agregar-dietas/agregar-dietas.component';
+import { ModificardietaComponent } from './dietas/modificar-dietas/modificar-dietas.component';
+import { MostrarentrenosComponent } from './entrenos/mostrar-entrenos/mostrar-entrenos.component';
+import { AgregarentrenosComponent } from './entrenos/agregar-entrenos/agregar-entrenos.component';
+import { ModificarentrenosComponent } from './entrenos/modificar-entrenos/modificar-entrenos.component';
+import { MostrarprogresosComponent } from './progresos/mostrar-progresos/mostrar-progresos.component';
+import { AgregarprogresosComponent } from './progresos/agregar-progresos/agregar-progresos.component';
+import { ModificarprogresosComponent } from './progresos/modificar-progresos/modificar-progresos.component';
+import { FormularioAgregarRutinasComponent } from './rutinas/formulario-agregar-rutinas/formulario-agregar-rutinas.component';
+import { FormularioModificarRutinasComponent } from './rutinas/formulario-modificar-rutinas/formulario-modificar-rutinas.component';
+import { MostrarTablaRutinasComponent } from './rutinas/mostrar-tabla-rutinas/mostrar-tabla-rutinas.component';
 
 
 
@@ -51,22 +54,25 @@ import { ModificarDocenteCursoComponent } from './docente-curso/modificar-docent
     MiTablaComponent,
     MiFormularioComponent,
     EditarFormularioComponent,
-    MostrarComponent,
-    AgregarComponent,
-    ModificarComponent,
-    MostrarDocentesComponent,
-    AgregarDocentesComponent,
-    ModificarDocentesComponent,
+    MostrarclienteComponent,
+    AgregarclienteComponent,
+    ModificarclienteComponent,
+    MostrarentrenadorComponent,
+    AgregarentrenadorComponent,
+    ModificarentrenadorComponent,
     LoginFormularioComponent,
-    MostarCursosComponent,
-    AgregarCursosComponent,
-    ModificarCursosComponent,
-    MostrarEstudianteCursoComponent,
-    AgregarEstudianteCursoComponent,
-    ModificarEstudianteCursoComponent,
-    MostrarDocenteCursoComponent,
-    AgregarDocenteCursoComponent,
-    ModificarDocenteCursoComponent
+    MostrardietaComponent,
+    AgregardietaComponent,
+    ModificardietaComponent,
+    MostrarentrenosComponent,
+    AgregarentrenosComponent,
+    ModificarentrenosComponent,
+    MostrarprogresosComponent,
+    AgregarprogresosComponent,
+    ModificarprogresosComponent,
+    FormularioAgregarRutinasComponent,
+    FormularioModificarRutinasComponent,
+    MostrarTablaRutinasComponent
   ],
   imports: [
     BrowserModule,

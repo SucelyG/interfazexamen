@@ -14,17 +14,15 @@ export class EditarFormularioComponent implements OnInit{
   persona: Persona ={
     id: '',
     nombre: '',
-    apellido: '',
-    fecha_nacimiento: '',
-    Direccion: ''
+    Apellido: '',
+    edad: ''
   }
 
   form = this.fb.group({
     id: [''],
     nombre: ['', Validators.required],
-    apellido: ['', Validators.required],
-    fecha_nacimiento: ['', Validators.required],
-    Direccion: ['', Validators.required]
+    Apellido: ['', Validators.required],
+    edad: ['', Validators.required]
   });
 
   constructor(private fb: FormBuilder,
