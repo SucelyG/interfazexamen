@@ -6,12 +6,12 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
 export interface dieta {
-  id: string;
-  dietas: string;
-  listado_de_dietas:string;
-  fecha_inicio: string;
-  fecha_fin: string;
-  id_persona:string;
+  "id": string;
+  "dietas": string;
+  "listado_de_dietas":string;
+  "fecha_inicio": string;
+  "fecha_fin": string;
+  "id_persona":string;
 }
 
 // TODO: replace this with real data from your application

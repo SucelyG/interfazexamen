@@ -16,7 +16,7 @@
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput type = "date" placeholder="id_rutina" formControlName="id_rutina">
+            <input matInput  placeholder="id_rutina" formControlName="id_rutina">
             <mat-error *ngIf= "form.controls['id_rutina'].hasError('required')">
               <strong>required</strong>
             </mat-error>
@@ -27,7 +27,7 @@
         <div class="col-ms-6">
           <mat-form-field class="full-width">
             <input matInput placeholder="id_entrenos" formControlName="id_entrenos">
-            <mat-error *ngIf="form.controls['id_entrenos'].hasError('required')">
+            <mat-error *ngIf= "form.controls['id_entrenos'].hasError('required')">
               <strong>required</strong>
             </mat-error>
           </mat-form-field>
@@ -47,7 +47,7 @@
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput type = "date" placeholder="status" formControlName="status">
+            <input matInput  placeholder="status" formControlName="status">
             <mat-error *ngIf= "form.controls['status'].hasError('required')">
               <strong>required</strong>
             </mat-error>

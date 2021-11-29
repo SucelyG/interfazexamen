@@ -16,7 +16,7 @@ export class AgregarclienteComponent {
     id_rutina: ['', Validators.required],
     id_entrenos: ['', Validators.required],
     id_dieta: ['',Validators.required],
-    status: ['']
+    status: ['',Validators.required]
   });
 
 

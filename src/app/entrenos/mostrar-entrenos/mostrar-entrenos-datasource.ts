@@ -6,16 +6,14 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
 export interface entrenos {
-  id: string;
-  id_entrenador: string;
-  id_rutinas: string;
-  id_persona: string;
+  "id": string,
+  "id_entrenador": string,
+  "id_rutinas": string,
+  "id_persona": string,
 }
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: entrenos[] = [
-
-];
+const EXAMPLE_DATA: entrenos[] = [];
 
 /**
  * Data source for the MostrarEstudianteCurso view. This class should
@@ -23,7 +21,7 @@ const EXAMPLE_DATA: entrenos[] = [
  * (including sorting, pagination, and filtering).
  */
 export class MostrarentrenosDataSource extends DataSource<entrenos> {
-  data: entrenos[] = EXAMPLE_DATA;
+  data: entrenos[] = [];
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
 

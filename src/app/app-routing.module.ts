@@ -14,7 +14,7 @@ import { EditarFormularioComponent } from './personas/editar-formulario/editar-f
 import { MiTablaComponent } from './personas/mi-tabla/mi-tabla.component';
 import { MiFormularioComponent } from './personas/mi-formulario/mi-formulario.component';
 import { NgModule} from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { MostrarentrenosComponent } from './entrenos/mostrar-entrenos/mostrar-entrenos.component';
 import { AgregarentrenosComponent } from './entrenos/agregar-entrenos/agregar-entrenos.component';
 import { ModificarentrenosComponent } from './entrenos/modificar-entrenos/modificar-entrenos.component';
@@ -31,31 +31,31 @@ const routes: Routes = [
   {path: '', component:  LoginFormularioComponent},
   {path: 'login', component:  LoginFormularioComponent},
 
-  {path: 'personas', component:  MiTablaComponent},
+  {path: 'personas', component:  MiTablaComponent, canActivate:[AuthGuard]},
   {path: 'agregar', component: MiFormularioComponent},
   {path: 'edit/:id', component: EditarFormularioComponent},
 
-  {path: 'cliente', component: MostrarclienteComponent},
+  {path: 'cliente', component: MostrarclienteComponent, canActivate:[AuthGuard]},
   {path: 'agregarcliente', component: AgregarclienteComponent},
   {path: 'editar/:id', component: ModificarclienteComponent},
 
-  {path: 'entrenador', component: MostrarentrenadorComponent},
+  {path: 'entrenador', component: MostrarentrenadorComponent, canActivate:[AuthGuard]},
   {path: 'agregar-entrenadors', component: AgregarentrenadorComponent},
   {path: 'editar-entrenador/:id', component: ModificarentrenadorComponent},
 
-  {path: 'dieta', component: MostrardietaComponent},
+  {path: 'dieta', component: MostrardietaComponent, canActivate:[AuthGuard]},
   {path: 'agregar-dieta', component: AgregardietaComponent},
   {path: 'editar-dieta/:id', component: ModificardietaComponent},
 
-  {path: 'entrenos', component: MostrarentrenosComponent},
+  {path: 'entrenos', component: MostrarentrenosComponent, canActivate:[AuthGuard]},
   {path: 'agregar-entrenos', component: AgregarentrenosComponent},
   {path: 'editar-entrenos/:id', component: ModificarentrenosComponent},
 
-  {path: 'progresos', component: MostrarprogresosComponent},
+  {path: 'progresos', component: MostrarprogresosComponent, canActivate:[AuthGuard]},
   {path: 'agregar-progresos', component: AgregarprogresosComponent},
   {path: 'editar-progresos/:id', component: ModificarprogresosComponent},
 
-  {path: 'rutinas', component: MostrarTablaRutinasComponent},
+  {path: 'rutinas', component: MostrarTablaRutinasComponent, canActivate:[AuthGuard]},
   {path: 'agregar-rutinas', component: FormularioAgregarRutinasComponent},
   {path: 'editar-rutinas/:id', component: FormularioModificarRutinasComponent},
 

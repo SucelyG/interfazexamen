@@ -8,13 +8,11 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 export interface entrenador {
   "id": string,
   "id_persona": string,
-  "status": string
+  "status": string,
 }
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: entrenador [] = [
-
-];
+const EXAMPLE_DATA: entrenador [] = [];
 
 /**
  * Data source for the MostrarDocentes view. This class should
@@ -22,7 +20,7 @@ const EXAMPLE_DATA: entrenador [] = [
  * (including sorting, pagination, and filtering).
  */
 export class MostrarentrenadorDataSource extends DataSource<entrenador> {
-  data: entrenador [] = [];
+  data: entrenador[] = [];
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
 
